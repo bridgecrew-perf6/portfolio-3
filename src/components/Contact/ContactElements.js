@@ -1,22 +1,20 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const FooterSection = styled.div`
+export const ContactSection = styled.div`
   width: 100%;
   height: 100vh;
-  padding: 100px 0;
+  padding-top: 200px;
   background-color: #2e352e;
 `
-export const FooterContainer = styled.div`
+export const ContactContainer = styled.div`
   max-width: 1500px;
   margin: 0 auto;
   padding-right: 100px;
   padding-left: 100px;
 `
 
-export const FooterWrapper = styled.div``
-
-export const Header = styled.h1`
+export const ContactHeader = styled.h1`
   font-size: 9rem;
   font-weight: 600;
 `

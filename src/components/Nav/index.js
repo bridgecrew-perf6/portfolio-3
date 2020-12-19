@@ -12,6 +12,8 @@ import {
   SocialLink,
   NavItem,
   NavLink,
+  MobileIcon,
+  SocialMenuWrapper,
 } from "./NavElements"
 
 const Nav = () => {
@@ -19,20 +21,44 @@ const Nav = () => {
     borderBottom: "8px solid red",
   }
 
+  const [click, setClick] = useState(false)
+
+  const handleClick = () => setClick(!click)
+
+  const isScrolling = () => {
+    if (window.pageYOffset > 0) {
+      setClick(true)
+    }
+    setClick(false)
+  }
+
+  useEffect(() => {
+    isScrolling()
+    window.addEventListener("scroll", isScrolling)
+    return () => {
+      window.removeEventListener("scroll", isScrolling)
+    }
+  }, [])
+
   return (
     <>
       <NavSection>
         <NavContainer>
           <NavWrapper>
             <SocialMenu>
-              <SocialLink to="/">
-                <FaGithub />
-              </SocialLink>
-              <SocialLink to="/">
-                <FaLinkedinIn />
-              </SocialLink>
+              <SocialMenuWrapper>
+                <SocialLink to="/">
+                  <FaGithub />
+                </SocialLink>
+                <SocialLink to="/">
+                  <FaLinkedinIn />
+                </SocialLink>
+              </SocialMenuWrapper>
+              <MobileIcon onClick={handleClick}>
+                {click ? <FaTimes /> : <RiMenu3Line />}
+              </MobileIcon>
             </SocialMenu>
-            <NavMenu>
+            <NavMenu isClick={click}>
               <NavItem>
                 <NavLink to="/" activeStyle={ACTIVE_STYLE}>
                   About
