@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
-<p>My portfolio. Still in development.</p><br>
+<p>My portfolio. Still in development.</p>
 <a href="https://yunusokutan.com">yunusokutan.com</a>
 
 ## 🚀 How to run
