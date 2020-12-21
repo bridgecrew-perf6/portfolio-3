@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react"
+import React, { useState, useRef } from "react"
 import { IoMdMail } from "react-icons/io"
 import { FaPhone, FaTimes } from "react-icons/fa"
 import {
@@ -17,6 +17,8 @@ import {
   Spinner,
   Textarea,
   ErrorMessage,
+  ContactFormText,
+  ContactFormTextWrapper,
 } from "./ContactElements"
 
 const Contact = () => {
@@ -24,15 +26,14 @@ const Contact = () => {
     name: "",
     email: "",
     number: "",
+    subject: "",
     message: "",
   }
 
   const contactRef = useRef()
   const [inputs, setInputs] = useState(initialInputs)
-
   const [status, setStatus] = useState("")
   const [spinner, setSpinner] = useState(false)
-
   const [showError, setShowError] = useState(false)
 
   const handleSubmit = e => {
@@ -79,37 +80,35 @@ const Contact = () => {
           <ContactHeader>Get in touch?</ContactHeader>
           <ContactOuterWrapper>
             <ContactInnerWrapper>
-              <IoMdMail style={{ marginRight: "20px" }} />
-              yunusokutan@mail.com
+              <IoMdMail style={{ color: "#fff", marginRight: "20px" }} />
+              <a href="mailto:yunusokutan@mail.com">yunusokutan@mail.com</a>
             </ContactInnerWrapper>
             <ContactInnerWrapper>
-              <FaPhone style={{ marginRight: "20px" }} />
-              +45 7161 7646
+              <FaPhone style={{ color: "#fff", marginRight: "20px" }} />
+              <a href="tel:+4571617646">+45 7161 7646</a>
             </ContactInnerWrapper>
           </ContactOuterWrapper>
           <ContactForm
-            action="https://formspree.io/f/xoqpnvwb"
+            action="https://formspree.io/f/mqkggelg"
             method="POST"
             onSubmit={handleSubmit}
           >
-            <div
-              style={{
-                width: "50%",
-                justifyContent: "center",
-                display: "flex",
-                margin: "10px 0",
-              }}
-            >
-              {showError && (
-                <ErrorMessage>
-                  Et eller flere felter mangler
-                  <FaTimes
-                    onClick={() => setShowError(false)}
-                    style={{ cursor: "pointer" }}
-                  />
-                </ErrorMessage>
-              )}
-            </div>
+            <ContactFormText>
+              <ContactFormTextWrapper>
+                {showError && (
+                  <ErrorMessage>
+                    Et eller flere felter mangler
+                    <FaTimes
+                      onClick={() => setShowError(false)}
+                      style={{ cursor: "pointer" }}
+                    />
+                  </ErrorMessage>
+                )}
+              </ContactFormTextWrapper>
+              <ContactFormTextWrapper>
+                <p>Please fill the contact form below:</p>
+              </ContactFormTextWrapper>
+            </ContactFormText>
             <ContactFormOuterWrapper>
               <ContactFormInnerWrapper>
                 <Group>
@@ -117,7 +116,7 @@ const Contact = () => {
                     type="text"
                     value={inputs.name}
                     onChange={handleInputElements}
-                    placeholder="Navn*"
+                    placeholder="Name*"
                     name="name"
                     ref={contactRef}
                   />
@@ -137,8 +136,18 @@ const Contact = () => {
                     type="tel"
                     value={inputs.number}
                     onChange={handleInputElements}
-                    placeholder="Nummer*"
+                    placeholder="Number*"
                     name="number"
+                    ref={contactRef}
+                  />
+                </Group>
+                <Group>
+                  <Input
+                    type="text"
+                    value={inputs.subject}
+                    onChange={handleInputElements}
+                    placeholder="Subject*"
+                    name="subject"
                     ref={contactRef}
                   />
                 </Group>
@@ -148,7 +157,7 @@ const Contact = () => {
                   <Textarea
                     value={inputs.texts}
                     onChange={handleInputElements}
-                    placeholder="Skriv en besked*"
+                    placeholder="Write your comment*"
                     name="message"
                     ref={contactRef}
                   />
@@ -156,14 +165,18 @@ const Contact = () => {
                 <Group>
                   <SubmitWrap>
                     {status === "SUCCESS" ? (
-                      <p>Tak for din besked!</p>
+                      <p style={{ color: "#fff", fontSize: "1.5rem" }}>
+                        Tak for din besked!
+                      </p>
                     ) : (
                       <Submit type="submit" disabled={spinner}>
                         {spinner ? <Spinner /> : <p>Send</p>}
                       </Submit>
                     )}
                     {status === "ERROR" && (
-                      <p>Ooops! Der opstod en fejl. Venligst prøv igen.</p>
+                      <p style={{ color: "#fff", fontSize: "1.5rem" }}>
+                        Ooops! Der opstod en fejl. Venligst prøv igen.
+                      </p>
                     )}
                   </SubmitWrap>
                 </Group>

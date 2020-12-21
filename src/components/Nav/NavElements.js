@@ -5,15 +5,13 @@ export const NavSection = styled.div`
   width: 100%;
   position: absolute;
   top: 0;
-  z-index: 99;
   padding-top: 40px;
+  z-index: 99;
   background-color: #fff;
 `
 
 export const NavContainer = styled.div`
   display: flex;
-  max-width: 1500px;
-  margin: 0 auto;
   padding-right: 100px;
   padding-left: 100px;
   justify-content: flex-end;
@@ -43,13 +41,10 @@ export const SocialMenuWrapper = styled.div`
   }
 `
 
-export const SocialLink = styled(Link)`
+export const SocialLink = styled.a`
   margin-left: 5px;
   font-size: 2rem;
   color: #242424;
-  &:hover {
-    transform: scale(1.1);
-  }
 `
 
 export const NavMenu = styled.ul`
@@ -90,8 +85,10 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   padding: 0.5rem 0 0.5rem 2rem;
   height: 100%;
+  border-bottom: 4px solid transparent;
+  transition: all 0.5s ease;
   &:hover {
-    border-bottom: 4px solid red;
+    border-bottom: 4px solid #f00946;
   }
   @media screen and (max-width: 891px) {
     padding: 0;
@@ -107,19 +104,3 @@ export const MobileIcon = styled.div`
     margin-right: 25px;
   }
 `
-
-/**
- *   &:hover::after {
-    border-bottom: 4px solid red;
-    width: 100%;
-    transition: width 0.6s;
-  }
-  &::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #de591b;
-    transition: width 0.3s;
-  }
- */

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { FaTimes } from "react-icons/fa"
 import { RiMenu3Line } from "react-icons/ri"
-import { IconContext } from "react-icons/lib"
 import { FaGithub, FaLinkedinIn } from "react-icons/fa"
 import {
   NavSection,
@@ -18,7 +17,7 @@ import {
 
 const Nav = () => {
   const ACTIVE_STYLE = {
-    borderBottom: "8px solid red",
+    borderBottom: "8px solid #f00946",
   }
 
   const [click, setClick] = useState(false)
@@ -47,10 +46,18 @@ const Nav = () => {
           <NavWrapper>
             <SocialMenu>
               <SocialMenuWrapper>
-                <SocialLink to="/">
+                <SocialLink
+                  href="https://github.com/yunus-cookies/"
+                  target="_blank"
+                  rel="external github link"
+                >
                   <FaGithub />
                 </SocialLink>
-                <SocialLink to="/">
+                <SocialLink
+                  href="https://www.linkedin.com/in/yunus-emre-okutan-74b658141"
+                  target="_blank"
+                  rel="external linkedin link"
+                >
                   <FaLinkedinIn />
                 </SocialLink>
               </SocialMenuWrapper>

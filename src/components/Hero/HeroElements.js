@@ -1,30 +1,37 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
 
 export const HeroSection = styled.div`
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   padding-top: 200px;
   @media screen and (max-width: 891px) {
     padding-top: 150px;
+    height: 100%;
   }
 `
 export const HeroContainer = styled.div`
   width: 100%;
   max-width: 1500px;
-  padding: 100px 0;
-  margin: 0 auto;
+  margin: 0 100px 0 100px;
   display: flex;
   justify-content: flex-start;
   @media screen and (max-width: 891px) {
     padding: 0;
+    margin: 0 auto;
   }
 `
 export const HeroRow = styled.div`
+  background-color: #242424;
   display: flex;
   justify-content: space-between;
+  border-radius: 8px;
   width: 100%;
   flex-direction: column;
+  padding: 50px 50px;
+  @media screen and (max-width: 891px) {
+    padding: 0;
+    margin: 0 15px 15px 15px;
+  }
 `
 
 export const HeroFirstCol = styled.div`
@@ -51,28 +58,29 @@ export const HeroSecondCol = styled.div`
 
 export const HeroWrapper = styled.div`
   h1 {
-    font-weight: 300;
+    font-weight: 600;
     font-size: 46px;
     line-height: 67px;
-    color: #242424;
+    color: #fff;
   }
   p {
     margin-top: 50px;
-    color: #242424;
+    color: #fff;
     font-weight: 400;
     font-size: 22px;
     line-height: 33px;
   }
   @media screen and (max-width: 891px) {
-    padding: 0 30px;
+    padding: 0 25px;
     h1 {
-      font-weight: 300;
-      font-size: 26px;
+      font-weight: 600;
+      font-size: 25px;
       line-height: 47px;
-      color: #242424;
     }
     p {
       margin-bottom: 20px;
+      font-weight: 300;
+      font-size: 18px;
     }
   }
 `
@@ -81,5 +89,6 @@ export const HeroImgWrapper = styled.div`
   margin: 0 auto;
   @media screen and (max-width: 891px) {
     width: 50%;
+    margin: 20px auto 0 auto;
   }
 `
