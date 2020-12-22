@@ -1,16 +1,12 @@
 import React from "react"
-import {
-  SkillsSection,
-  SkillsContainer,
-  SkillsWrapper,
-  SkillsGroup,
-} from "./SkillsElements"
+import { Container, Section } from "../Page/PageElements"
+import { SkillsWrapper, SkillsGroup } from "./SkillsElements"
 
 const Skills = () => {
   return (
     <>
-      <SkillsSection>
-        <SkillsContainer>
+      <Section>
+        <Container>
           <SkillsWrapper>
             <SkillsGroup>
               <h1>Frontend frameworks / libraries</h1>
@@ -33,8 +29,8 @@ const Skills = () => {
               <p>Redux / Graphql / Postman API</p>
             </SkillsGroup>
           </SkillsWrapper>
-        </SkillsContainer>
-      </SkillsSection>
+        </Container>
+      </Section>
     </>
   )
 }

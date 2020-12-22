@@ -67,17 +67,29 @@ const Nav = () => {
             </SocialMenu>
             <NavMenu isClick={click}>
               <NavItem>
-                <NavLink to="/" activeStyle={ACTIVE_STYLE}>
+                <NavLink
+                  to="/"
+                  onClick={() => setClick(false)}
+                  activeStyle={ACTIVE_STYLE}
+                >
                   About
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/skills" activeStyle={ACTIVE_STYLE}>
+                <NavLink
+                  to="/skills"
+                  onClick={() => setClick(false)}
+                  activeStyle={ACTIVE_STYLE}
+                >
                   Skills
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/contact" activeStyle={ACTIVE_STYLE}>
+                <NavLink
+                  to="/contact"
+                  onClick={() => setClick(false)}
+                  activeStyle={ACTIVE_STYLE}
+                >
                   Contact
                 </NavLink>
               </NavItem>

@@ -1,28 +1,7 @@
 import styled from "styled-components"
 
-export const SkillsSection = styled.div`
-  width: 100%;
-  height: 100%;
-  padding-top: 200px;
-  @media screen and (max-width: 891px) {
-    padding-top: 150px;
-    height: 100%;
-  }
-`
-export const SkillsContainer = styled.div`
-  max-width: 1500px;
-  padding-right: 100px;
-  padding-left: 100px;
-  @media screen and (max-width: 891px) {
-    max-width: 100%;
-    padding: 0 15px;
-    margin-bottom: 15px;
-  }
-`
 export const SkillsWrapper = styled.div`
-  background-color: #242424;
-  padding: 25px;
-  border-radius: 8px;
+  width: 100%;
 `
 export const SkillsGroup = styled.div`
   margin: 40px 0;

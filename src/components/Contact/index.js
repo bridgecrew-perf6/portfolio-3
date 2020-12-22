@@ -2,8 +2,7 @@ import React, { useState, useRef } from "react"
 import { IoMdMail } from "react-icons/io"
 import { FaPhone, FaTimes } from "react-icons/fa"
 import {
-  ContactSection,
-  ContactContainer,
+  ContactCol,
   ContactHeader,
   ContactOuterWrapper,
   ContactInnerWrapper,
@@ -20,6 +19,7 @@ import {
   ContactFormText,
   ContactFormTextWrapper,
 } from "./ContactElements"
+import { Section, Container } from "../Page/PageElements"
 
 const Contact = () => {
   const initialInputs = {
@@ -75,19 +75,21 @@ const Contact = () => {
 
   return (
     <>
-      <ContactSection>
-        <ContactContainer>
-          <ContactHeader>Get in touch?</ContactHeader>
-          <ContactOuterWrapper>
-            <ContactInnerWrapper>
-              <IoMdMail style={{ color: "#fff", marginRight: "20px" }} />
-              <a href="mailto:yunusokutan@mail.com">yunusokutan@mail.com</a>
-            </ContactInnerWrapper>
-            <ContactInnerWrapper>
-              <FaPhone style={{ color: "#fff", marginRight: "20px" }} />
-              <a href="tel:+4571617646">+45 7161 7646</a>
-            </ContactInnerWrapper>
-          </ContactOuterWrapper>
+      <Section>
+        <Container contact>
+          <ContactCol>
+            <ContactHeader>Get in touch?</ContactHeader>
+            <ContactOuterWrapper>
+              <ContactInnerWrapper>
+                <IoMdMail style={{ color: "#fff", marginRight: "20px" }} />
+                <a href="mailto:yunusokutan@mail.com">yunusokutan@mail.com</a>
+              </ContactInnerWrapper>
+              <ContactInnerWrapper>
+                <FaPhone style={{ color: "#fff", marginRight: "20px" }} />
+                <a href="tel:+4571617646">+45 7161 7646</a>
+              </ContactInnerWrapper>
+            </ContactOuterWrapper>
+          </ContactCol>
           <ContactForm
             action="https://formspree.io/f/mqkggelg"
             method="POST"
@@ -166,7 +168,7 @@ const Contact = () => {
                   <SubmitWrap>
                     {status === "SUCCESS" ? (
                       <p style={{ color: "#fff", fontSize: "1.5rem" }}>
-                        Tak for din besked!
+                        Thank you!
                       </p>
                     ) : (
                       <Submit type="submit" disabled={spinner}>
@@ -175,7 +177,7 @@ const Contact = () => {
                     )}
                     {status === "ERROR" && (
                       <p style={{ color: "#fff", fontSize: "1.5rem" }}>
-                        Ooops! Der opstod en fejl. Venligst prøv igen.
+                        Ooops! Something went wrong. Please try again.
                       </p>
                     )}
                   </SubmitWrap>
@@ -183,8 +185,8 @@ const Contact = () => {
               </ContactFormInnerWrapper>
             </ContactFormOuterWrapper>
           </ContactForm>
-        </ContactContainer>
-      </ContactSection>
+        </Container>
+      </Section>
     </>
   )
 }

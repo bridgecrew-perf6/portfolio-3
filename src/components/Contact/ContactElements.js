@@ -20,35 +20,16 @@ export const Spinner = styled.div`
   }
 `
 
-export const ContactSection = styled.div`
+export const ContactCol = styled.div`
   width: 100%;
-  height: 100%;
-  padding-top: 200px;
-  margin-bottom: 15px;
-  @media screen and (max-width: 891px) {
-    padding-top: 150px;
-    height: 100%;
-  }
-`
-export const ContactContainer = styled.div`
-  max-width: 1500px;
-  margin: 0 100px;
-  padding: 25px 100px 40px 100px;
-  background-color: #242424;
-  border-radius: 8px;
-  @media screen and (max-width: 891px) {
-    max-width: 100%;
-    padding: 25px 15px 0 15px;
-    margin: 0 15px 15px 15px;
-  }
 `
 
 export const ContactHeader = styled.h1`
-  font-size: 9rem;
+  font-size: 8.2rem;
   font-weight: 600;
   color: #fff;
   @media screen and (max-width: 891px) {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 `
 
@@ -57,7 +38,7 @@ export const ContactOuterWrapper = styled.div`
   flex-direction: column;
   margin-top: 100px;
   @media screen and (max-width: 891px) {
-    margin-top: 50px;
+    margin: 25px 0;
   }
 `
 
@@ -78,7 +59,7 @@ export const ContactInnerWrapper = styled.div`
     color: #f00946;
   }
   @media screen and (max-width: 991px) {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
   }
 `
 
@@ -99,19 +80,17 @@ export const ContactFormTextWrapper = styled.div`
   @media screen and (max-width: 891px) {
     width: 100%;
     p {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 `
 
 export const ContactForm = styled.form`
-  width: 100%;
+  width: 60%;
   height: 100%;
-  border-radius: 8px;
-  padding: 25px 5px 25px 5px;
-  margin: 25px auto 0 auto;
+  margin: 0 auto;
   @media screen and (max-width: 891px) {
-    padding: 25px 0;
+    width: 100%;
   }
 `
 
@@ -135,7 +114,7 @@ export const Group = styled.div`
 export const Input = styled.input`
   padding: 15px;
   background-color: rgba(255, 255, 255, 1);
-  margin: 0 0 25px;
+  margin: 0 0 8px;
   width: 100%;
   border-radius: 4px;
   border: none;
@@ -201,7 +180,7 @@ export const Textarea = styled.textarea`
   width: 100%;
   font-size: 2rem;
   padding: 10px;
-  margin: 0 0 15px;
+  margin: 0 0 8px;
   border: none;
   border-radius: 4px;
   transition: ease 0.3s all;
