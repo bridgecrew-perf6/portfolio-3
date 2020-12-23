@@ -22,10 +22,11 @@ export const Spinner = styled.div`
 
 export const ContactCol = styled.div`
   width: 100%;
+  margin-right: 50px;
 `
 
 export const ContactHeader = styled.h1`
-  font-size: 8.2rem;
+  font-size: 8rem;
   font-weight: 600;
   color: #fff;
   text-align: left;
@@ -35,7 +36,7 @@ export const ContactHeader = styled.h1`
   }
 
   @media screen and (max-width: 791px) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 `
 

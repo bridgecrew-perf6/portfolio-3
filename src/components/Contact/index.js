@@ -84,7 +84,7 @@ const Contact = () => {
                 <IoMdMail style={{ color: "#fff", marginRight: "20px" }} />
                 <a href="mailto:yunusokutan@mail.com">yunusokutan@mail.com</a>
               </ContactInnerWrapper>
-              <ContactInnerWrapper style={{ marginBottom: "75px" }}>
+              <ContactInnerWrapper style={{ marginBottom: "50px" }}>
                 <FaPhone style={{ color: "#fff", marginRight: "20px" }} />
                 <a href="tel:+4571617646">+45 7161 7646</a>
               </ContactInnerWrapper>

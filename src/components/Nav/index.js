@@ -74,7 +74,7 @@ const Nav = () => {
               </NavItem>
               <NavItem>
                 <NavLink
-                  to="/skills"
+                  to="/skills/"
                   onClick={() => setClick(false)}
                   activeStyle={ACTIVE_STYLE}
                 >
@@ -83,7 +83,7 @@ const Nav = () => {
               </NavItem>
               <NavItem>
                 <NavLink
-                  to="/contact"
+                  to="/contact/"
                   onClick={() => setClick(false)}
                   activeStyle={ACTIVE_STYLE}
                 >
