@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react"
 import { IoMdMail } from "react-icons/io"
-import { FaPhone, FaTimes } from "react-icons/fa"
+import { FaGithub, FaLinkedinIn, FaPhone, FaTimes } from "react-icons/fa"
 import {
   ContactCol,
   ContactHeader,
@@ -19,7 +19,7 @@ import {
   ContactFormText,
   ContactFormTextWrapper,
 } from "./ContactElements"
-import { Section, Container } from "../Page/PageElements"
+import { Section, Container } from "../../templates/PageElements"
 
 const Contact = () => {
   const initialInputs = {
@@ -84,9 +84,29 @@ const Contact = () => {
                 <IoMdMail style={{ color: "#fff", marginRight: "20px" }} />
                 <a href="mailto:yunusokutan@mail.com">yunusokutan@mail.com</a>
               </ContactInnerWrapper>
-              <ContactInnerWrapper>
+              <ContactInnerWrapper style={{ marginBottom: "75px" }}>
                 <FaPhone style={{ color: "#fff", marginRight: "20px" }} />
                 <a href="tel:+4571617646">+45 7161 7646</a>
+              </ContactInnerWrapper>
+              <ContactInnerWrapper>
+                <FaGithub style={{ color: "#fff", marginRight: "20px" }} />
+                <a
+                  href="https://github.com/yunus-cookies/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Github
+                </a>
+              </ContactInnerWrapper>
+              <ContactInnerWrapper>
+                <FaLinkedinIn style={{ color: "#fff", marginRight: "20px" }} />
+                <a
+                  href="https://www.linkedin.com/in/yunus-emre-okutan-74b658141"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Linkedin
+                </a>
               </ContactInnerWrapper>
             </ContactOuterWrapper>
           </ContactCol>
@@ -99,7 +119,7 @@ const Contact = () => {
               <ContactFormTextWrapper>
                 {showError && (
                   <ErrorMessage>
-                    Et eller flere felter mangler
+                    One or more fields are missing
                     <FaTimes
                       onClick={() => setShowError(false)}
                       style={{ cursor: "pointer" }}

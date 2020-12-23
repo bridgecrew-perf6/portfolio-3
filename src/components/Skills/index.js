@@ -1,6 +1,6 @@
 import React from "react"
-import { Container, Section } from "../Page/PageElements"
 import { SkillsWrapper, SkillsGroup } from "./SkillsElements"
+import { Section, Container } from "../../templates/PageElements"
 
 const Skills = () => {
   return (

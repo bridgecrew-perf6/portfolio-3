@@ -28,8 +28,14 @@ export const ContactHeader = styled.h1`
   font-size: 8.2rem;
   font-weight: 600;
   color: #fff;
-  @media screen and (max-width: 891px) {
-    font-size: 2.3rem;
+  text-align: left;
+
+  @media screen and (max-width: 1700px) {
+    font-size: 5rem;
+  }
+
+  @media screen and (max-width: 791px) {
+    font-size: 3rem;
   }
 `
 
@@ -37,7 +43,8 @@ export const ContactOuterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 100px;
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 1150px) {
     margin: 25px 0;
   }
 `
@@ -45,7 +52,7 @@ export const ContactOuterWrapper = styled.div`
 export const ContactInnerWrapper = styled.div`
   display: flex;
   align-items: center;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 600;
   margin: 10px 0;
   a {
@@ -53,12 +60,12 @@ export const ContactInnerWrapper = styled.div`
     color: #fff;
     transition: all 0.5s ease;
   }
-
   a:hover {
     transition: all 0.5s ease;
     color: #f00946;
   }
-  @media screen and (max-width: 991px) {
+
+  @media screen and (max-width: 791px) {
     font-size: 1.1rem;
   }
 `
@@ -71,13 +78,15 @@ export const ContactFormTextWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  text-align: left;
   p {
     width: 100%;
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #fff;
   }
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     width: 100%;
     p {
       font-size: 1rem;
@@ -89,7 +98,8 @@ export const ContactForm = styled.form`
   width: 60%;
   height: 100%;
   margin: 0 auto;
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 1150px) {
     width: 100%;
   }
 `
@@ -97,7 +107,6 @@ export const ContactForm = styled.form`
 export const ContactFormInnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 50%;
 `
 export const ContactFormOuterWrapper = styled.div`
   display: flex;
@@ -139,7 +148,7 @@ export const Input = styled.input`
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  @media screen and (max-width: 891px) {
+  @media screen and (max-width: 791px) {
     font-size: 1.2rem;
   }
 `
@@ -203,7 +212,7 @@ export const Textarea = styled.textarea`
     background-color: rgba(255, 255, 255, 0.8);
   }
 
-  @media screen and (max-width: 891px) {
+  @media screen and (max-width: 791px) {
     font-size: 1.2rem;
   }
 `

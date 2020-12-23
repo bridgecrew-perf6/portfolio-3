@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { HeroWrapper, HeroImgWrapper, HeroTextWrapper } from "./HeroElements"
-import { Section, Container } from "../Page/PageElements"
+import { Section, Container } from "../../templates/PageElements"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`

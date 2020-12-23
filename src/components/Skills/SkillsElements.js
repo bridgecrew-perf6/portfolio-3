@@ -23,7 +23,8 @@ export const SkillsGroup = styled.div`
       transform: scale(1.01);
     }
   }
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     h1 {
       font-size: 26px;
     }

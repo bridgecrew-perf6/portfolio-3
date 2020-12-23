@@ -18,7 +18,8 @@ export const HeroTextWrapper = styled.div`
     font-size: 22px;
     line-height: 33px;
   }
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     h1 {
       font-weight: 600;
       font-size: 25px;
@@ -33,9 +34,10 @@ export const HeroTextWrapper = styled.div`
 `
 
 export const HeroImgWrapper = styled.div`
-  width: 15%;
-  @media screen and (max-width: 891px) {
-    width: 50%;
+  width: 175px;
+  height: 175px;
+
+  @media screen and (max-width: 791px) {
     margin: 10px auto 10px auto;
   }
 `

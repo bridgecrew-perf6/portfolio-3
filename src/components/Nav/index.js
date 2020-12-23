@@ -25,10 +25,7 @@ const Nav = () => {
   const handleClick = () => setClick(!click)
 
   const isScrolling = () => {
-    if (window.pageYOffset > 0) {
-      setClick(true)
-    }
-    setClick(false)
+    if (window.pageYOffset > 0) setClick(false)
   }
 
   useEffect(() => {
@@ -49,14 +46,14 @@ const Nav = () => {
                 <SocialLink
                   href="https://github.com/yunus-cookies/"
                   target="_blank"
-                  rel="external github link"
+                  rel="noreferrer"
                 >
                   <FaGithub />
                 </SocialLink>
                 <SocialLink
                   href="https://www.linkedin.com/in/yunus-emre-okutan-74b658141"
                   target="_blank"
-                  rel="external linkedin link"
+                  rel="noreferrer"
                 >
                   <FaLinkedinIn />
                 </SocialLink>

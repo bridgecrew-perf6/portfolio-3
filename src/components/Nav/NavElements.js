@@ -15,7 +15,8 @@ export const NavContainer = styled.div`
   padding-right: 100px;
   padding-left: 100px;
   justify-content: flex-end;
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     max-width: 100%;
     padding: 0;
   }
@@ -30,13 +31,14 @@ export const NavWrapper = styled.div`
 export const SocialMenu = styled.div`
   display: flex;
   justify-content: flex-end;
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     justify-content: space-between;
   }
 `
 
 export const SocialMenuWrapper = styled.div`
-  @media screen and (max-width: 891px) {
+  @media screen and (max-width: 791px) {
     margin-left: 25px;
   }
 `
@@ -54,7 +56,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   padding-top: 20px;
 
-  @media screen and (max-width: 891px) {
+  @media screen and (max-width: 791px) {
     flex-direction: column;
     width: 100%;
     position: absolute;
@@ -72,7 +74,8 @@ export const NavItem = styled.li`
   height: 70px;
   margin-left: 7px;
   border-bottom: 4px solid transparent;
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     margin-bottom: 50px;
   }
 `
@@ -90,14 +93,16 @@ export const NavLink = styled(Link)`
   &:hover {
     border-bottom: 4px solid #f00946;
   }
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     padding: 0;
   }
 `
 
 export const MobileIcon = styled.div`
   display: none;
-  @media screen and (max-width: 891px) {
+
+  @media screen and (max-width: 791px) {
     display: flex;
     font-size: 2rem;
     justify-content: flex-end;
